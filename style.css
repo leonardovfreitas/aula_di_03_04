@@ -2,36 +2,45 @@
     /*bloco de reset*/
     box-sizing: border-box;
 }
+
 body{
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4; /*cor em hexadecimal*/
+    font-family: 'Courier New', Courier, monospace; /* fonte monoespaçada combina com tema tech */
+    background-color: #1a1a2e; /* fundo escuro azul-noite */
     padding: 20px;
+    color: #e0e0e0; /* texto claro padrão */
 }
+
 header{
-    background-color: #c0c0c0;/*cinza cocô kkkk */
-    color: #ffff; /*branco em hexadecimal*/
+    background-color: #16213e; /* azul escuro profundo */
+    color: #00d4aa; /* verde-água tecnológico */
     text-align: center; /*centraliza o texto*/
+    border-bottom: 3px solid #00d4aa; /* linha de destaque na base */
+    letter-spacing: 4px; /* espaçamento entre letras - visual retrô */
+    padding: 10px 0;
 }
+
 nav a{ /*nav navigation a a, de link, vou trabalhar só no link*/
-    color: black;
+    color: #00d4aa; /* links no mesmo verde-água */
     text-decoration: none; /*tirei toda a decoração do texto*/
     padding: 4px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;/*radius é a borda arredondada*/
-    background-color: #CCCC;
-    border-bottom-color: #d8d;
+    background-color: #16213e; /* fundo escuro nos botões de nav */
+    border-bottom-color: #00d4aa; /* borda inferior no verde-água */
 }
-nav a:hover{color: red;}
+
+nav a:hover{ color: #ffffff; background-color: #00d4aa; } /* inversão de cor no hover */
 .bloco{ /*declaração de class, a class procede de "." */
-    background-color: #cccc;
-    color: black;
-    border: 1px dotted #a3a3; /*borda geral tracejada*/
+    background-color: #16213e; /* mesmo azul escuro do header */
+    color: #e0e0e0; /* texto claro */
+    border: 1px dotted #00d4aa; /*borda geral tracejada no verde-água*/
     border-radius: 6px;
     padding: 16px;
     margin-bottom: 16px;
-    border-top: 2px solid #d8d; /*borda superior solida*/
+    border-top: 2px solid #00d4aa; /*borda superior solida*/
 }
+
 #galeria{ /* # significa id, onde coloca-se por ex.: id="galeria"
     só pode ter 1 com mesmo nome por página*/
     display: flex;
@@ -39,13 +48,13 @@ nav a:hover{color: red;}
     gap: 24px; /*espaço entre elementos dentro do id*/
     justify-content: center; /*centraliza horizontal*/ /*reforçando que ele vai estar "flexivel"*/
     padding: 20px;
-
 }
+
 .foto{
-    background: #ffffff;
+    background: #16213e; /* fundo escuro no lugar do branco */
     padding: 12px 12px 20px 12px; /*lat dir, esq, baixo e topo*/
-    border: 1px solid #dddddd;
-    box-shadow: 0 4px 10px #000000;
+    border: 1px solid #00d4aa; /* borda verde-água */
+    box-shadow: 0 4px 10px #00d4aa; /* sombra brilhante no verde-água */
     width: 220px;/*largura*/
     text-align: center;/*alinhamento ao centro*/
     border-radius: 4px;
@@ -56,15 +65,17 @@ nav a:hover{color: red;}
     height: 220px;
     object-fit: cover; /*efeito de sobrepor*/
     display: block;
+    filter: sepia(30%) contrast(110%); /* leve filtro retrô nas imagens */
 }
+
 .foto:hover{
     transform: scale(1.50) rotate(-5deg);
-    
 }
+
 .legenda{
     margin-top: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     font-style: italic;
-
+    color: #00d4aa; /* legenda no verde-água */
 }
